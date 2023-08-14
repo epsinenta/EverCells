@@ -1,0 +1,17 @@
+Evercell
+Contract is deployed at address: 0:6caae0ddf404f4a91312ae5f7d8da343b0c51904dc92e92a9e5f5a8773d2024b
+
+
+myDebot
+Contract is deployed at address: 0:a64904e87ea10ef5ad1407803787f4386a800d4b3842ffe9ea6ab3bf1895517b
+
+
+commands
+everdev sol compile Contract/Evercell.sol 
+everdev sol compile myDebot
+everdev c i myDebot
+everdev c i Evercell
+everdev c d Evercell
+everdev c d myDebot
+everdev contract run myDebot -i "dabi:$(xxd -ps -c 20000 < myDebot.abi.json)"
+tonos-cli debot fetch 0:ef8fc967f1ce8ce21de4632ee9756c96f1ac8905a9fc1607dfe1018d9bd815ad
